@@ -1,0 +1,13 @@
+.git
+
+# Environments
+.venv
+venv/
+venv.bak/
+
+.coverage
+.coverage.*
+
+
+Dockerfile
+docker-compose.yml

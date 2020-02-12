@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+
+  searh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./outputs:/usr/src/app/outputs
+    command: ['python', 'main.py', 'search', 'inputs/input_search.json']
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ['python', '-m', 'unittest', 'discover']
